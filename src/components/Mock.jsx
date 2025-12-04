@@ -8,7 +8,7 @@ import docImg from "../assets/images/document.png";
 import arrowImg from "../assets/images/next.png";
 import SkillTittle from "./SkillTittle";
 import SkillCard2 from "./SkillCard2";
-import MockCard from "./mockCard";
+import MockCard from "./MockCard";
 
 export default function Mock() {
   const description1 =
