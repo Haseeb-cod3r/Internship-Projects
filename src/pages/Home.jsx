@@ -8,7 +8,7 @@ import Career from "../components/Career.jsx";
 import Mock from "../components/Mock.jsx";
 import Journey from "../components/Journey.jsx";
 import AiCoach from "../components/AiCoach.jsx";
-import Info from "../components/info.jsx";
+import Info from "../components/Info.jsx";
 import Rating from "../components/Rating.jsx";
 import Opportunities from "../components/Opportunities.jsx";
 import Numbers from "../components/Numbers.jsx";
