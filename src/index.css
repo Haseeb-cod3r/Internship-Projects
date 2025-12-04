@@ -1,0 +1,69 @@
+@import "tailwindcss";
+:root {
+  --brand: #42a624;
+  --bg: #ffff;
+  --bgNav: #f3f4f6;
+  --bgNavv: #001432;
+  --bgCard: #f9fafb;
+  --bgCard2: #e5e7eb;
+  --bgImg: #e5e7eb;
+  --btnBg: #e5e7eb;
+  --text: #1f2937;
+  --heading: #000000;
+  --tild: #dff4e8;
+  --dream: #f3f4f6;
+  --bgCard3: #ffff;
+  --text2: black;
+}
+.dark {
+  --brand: #42a624;
+  --bg: #000000;
+  --bgNav: #121212;
+  --bgNavv: #0a0a0a;
+  --bgCard: #1e1e1e;
+  --bgCard2: #2c2c2c;
+  --bgImg: #002f06;
+  --text: #d1d5db;
+  --heading: #ffff;
+  --tild: #0e0e0e;
+  --dream: #1f2937;
+  --btnBg: #2e2e2e;
+  --bgCard3: #132f0a;
+  --text2: white;
+}
+@theme {
+  --font-arial: "Arial", "sans-serif";
+  --breakpoint-custom1: 900px;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-30%);
+  }
+  50% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+.animate-slide {
+  animation: slide 7s ease-in-out infinite;
+}
+@keyframes slider {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.animate-slider {
+  animation: slider 10s infinite linear;
+}
+@utility active {
+  @apply bg-green-400;
+}
+@utility notActive {
+  @apply bg-[#d1d5db];
+}
+
