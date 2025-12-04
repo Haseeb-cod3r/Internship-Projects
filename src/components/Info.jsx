@@ -1,6 +1,6 @@
 import React from "react";
 import SkillTittle from "./SkillTittle";
-import InfoCard from "./infoCard";
+import InfoCard from "./InfoCard";
 import InfoCard2 from "./InfoCard2";
 import dollarImg from "../assets/images/dollar-symbol.png";
 import bookImg from "../assets/images/open-book.png";
