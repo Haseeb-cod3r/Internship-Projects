@@ -1,12 +1,11 @@
 import React from "react";
 import AboutCard2Card from "./AboutCard2Card";
 import { Check, BookOpen, Briefcase, Star } from "lucide-react";
-import bgImg from "../assets/images/peoplethumbsup.webp"
-
+import bgImg from "../assets/images/peoplethumbsup.webp";
 
 export default function AboutCard2() {
   return (
-    <div className="flex flex-col items-center bg-[var(--bgNavv)] px-20">
+    <div className="flex flex-col items-center bg-[var(--bgNavv)] px-20 max-md:px-10">
       <div className="max-w-[1300px] flex gap-10 mt-30 mb-30 items-center max-lg:flex-col">
         <div>
           <div>
@@ -50,7 +49,7 @@ export default function AboutCard2() {
           </div>
         </div>
         <div>
-            <img src={bgImg} alt="" />
+          <img src={bgImg} alt="" />
         </div>
       </div>
     </div>

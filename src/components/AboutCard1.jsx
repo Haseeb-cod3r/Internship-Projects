@@ -5,7 +5,7 @@ import aboutImg from "../assets/images/about1.webp";
 export const AboutCard1 = () => {
   return (
     <section className="w-full bg-[var(--bg)] py-12 px-4 sm:px-6 lg:px-8 overflow-hidden flex justify-center">
-      <div className="max-w-[1300px] px-10">
+      <div className="max-w-[1300px] px-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="relative order-1 lg:order-1">
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-square bg-gray-900 max-lg:max-w-[500px]">
