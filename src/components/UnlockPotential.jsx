@@ -3,17 +3,7 @@ import { ArrowRight } from "lucide-react";
 import gentelImg from "../assets/images/gentleman.avif";
 import building from "../assets/images/building.avif";
 
-export const UnlockPotential = ({appear}) => {
-
-      const unlock = useRef();
-      
-        useEffect(() => {
-          if (appear) {
-           unlock.current.classList.add("mt-30")
-          } else {
-            unlock.current.classList.remove("mt-30")
-          }
-        }, [appear]);
+export const UnlockPotential = () => {
   return (
     <>
       <div className="bg-[var(--bgNav)] relative flex justify-center">
@@ -28,7 +18,7 @@ export const UnlockPotential = ({appear}) => {
 
         <div className="relative z-10 max-w-[1300px] flex items-center justify-center px-30 max-sm:px-5">
           <div className="flex flex-col gap-8 mt-50">
-            <div ref={(ref)=>{unlock.current = ref}} className="px-2">
+            <div className="px-2">
               <h1 className="text-[clamp(2rem,5vw,5rem)] font-bold leading-tight tracking-tight text-white">
                 Internee.pk
                 <br />

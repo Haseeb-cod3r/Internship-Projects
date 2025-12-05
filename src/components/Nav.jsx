@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import moonImg from "../assets/images/moon.png";
 import sunImg from "../assets/images/summer.png";
 import logo1Img from "../assets/images/logoColor.png";
@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import { AppContext } from "../context/themeContext";
 import cancelImg from "../assets/images/close.png";
 
-export default function Nav({ setAppear }) {
+export default function Nav({ setAppear, appear }) {
   const { theme, setTheme } = useContext(AppContext);
   const imageRef = useRef();
   const sunRef = useRef();
@@ -17,17 +17,22 @@ export default function Nav({ setAppear }) {
   const img1 = useRef();
   const img2 = useRef();
 
-  function handleToggle() {
-    if (img1.current.classList.contains("hidden")) {
-      setAppear(false);
+  useEffect(() => {
+    if (!appear) {
       img1.current.classList.remove("hidden");
       img2.current.classList.add("hidden");
       toggle.current.classList.add("hidden");
     } else {
-      setAppear(true);
       img1.current.classList.add("hidden");
       img2.current.classList.remove("hidden");
       toggle.current.classList.remove("hidden");
+    }
+  }, [appear]);
+  function handleToggle() {
+    if (appear) {
+      setAppear(false);
+    } else {
+      setAppear(true);
     }
   }
 

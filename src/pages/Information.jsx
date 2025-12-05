@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ProgramsCard } from "../components/Programscard";
+import { useOutletContext } from "react-router-dom";
 
 export default function Information() {
+      const {setAppear} = useOutletContext()
+      useEffect(()=>{
+            setAppear(false)
+      },[])
+
   return (
     <div>
       <ProgramsCard

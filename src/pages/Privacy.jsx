@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Faq } from "../components/Faq";
+import { useOutletContext } from "react-router-dom";
 
 export default function Privacy() {
+      const {setAppear} = useOutletContext()
+  useEffect(() => {
+      setAppear(false)
+    window.scrollTo(0, 0);
+  }, []);
   const content1 = (
     <div className="flex flex-col gap-5">
       <p>

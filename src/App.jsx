@@ -8,7 +8,7 @@ function App() {
   return (
     <main className="bg-[var(--heading)] max-w-2000px">
       <AppProvider>
-        <Nav setAppear={setAppear} />
+        <Nav setAppear={setAppear} appear={appear} />
         <Suspense
           fallback={
             <h1 className="w-screen h-screen font-bold bg-[var(--bg)]  flex items-center justify-center text-[var(--text2)]">
@@ -16,7 +16,7 @@ function App() {
             </h1>
           }
         >
-          <Outlet context={appear} />
+          <Outlet context={{appear,setAppear}} />
         </Suspense>
         <Footer />
       </AppProvider>

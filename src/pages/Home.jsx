@@ -17,10 +17,11 @@ import winnerImg from "../assets/images/winners.jpeg";
 import { useOutletContext } from "react-router-dom";
 const imgUrl = winnerImg;
 export default function () {
-  const appear = useOutletContext();
+  const { setAppear } = useOutletContext();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   useEffect(() => {
+    setAppear(false);
     const alreadyShown = sessionStorage.getItem("popupShown");
     if (!alreadyShown) {
       setIsModalOpen(true);
@@ -36,7 +37,7 @@ export default function () {
         onClose={handleCloseModal}
         imageUrl={imgUrl}
       />
-      <Hero appear={appear} />
+      <Hero />
       <Partners />
       <Internships />
       <Skill />

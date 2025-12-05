@@ -4,20 +4,11 @@ import laptopImg from "../assets/images/lapropguy.jpg";
 import engineerImg from "../assets/images/engineer.webp";
 import blueImg from "../assets/images/bluebackground.avif";
 
-export default function Categories({appear}) {
-       const graduate = useRef();
-            
-              useEffect(() => {
-                if (appear) {
-                 graduate.current.classList.add("mt-70")
-                } else {
-                  graduate.current.classList.remove("mt-70")
-                }
-              }, [appear]);
+export default function Categories() {
   return (
     <div className="bg-[var(--bg)] p-1 text-[var(--text)] flex justify-center">
       <div className="max-w-[1300px] mt-20 px-20 mb-20 max-md:px-10">
-        <div ref={(ref)=>{graduate.current = ref}} className="flex flex-col gap-5 items-center mb-10">
+        <div className="flex flex-col gap-5 items-center mb-10">
           <h1 className="text-[clamp(2rem,4vw,5rem)] font-bold text-[var(--text2)]">
             Graduate Programs
           </h1>

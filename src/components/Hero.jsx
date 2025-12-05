@@ -2,19 +2,7 @@ import React, { useEffect, useRef } from "react";
 import arrowImg from "../assets/images/right-up-white.png";
 import heroImg from "../assets/images/Group.webp";
 
-export default function Hero({ appear }) {
-  const hero = useRef();
-  useEffect(() => {
-    if (appear) {
-      hero.current.classList.remove("mt-10");
-      hero.current.classList.add("mt-100");
-      hero.current.classList.add("mb-40");
-    } else {
-      hero.current.classList.remove("mb-40");
-      hero.current.classList.remove("mt-100");
-      hero.current.classList.add("mt-10");
-    }
-  }, [appear]);
+export default function Hero() {
   return (
     <section
       className="relative overflow-hidden bg-[var(--bg)]
@@ -23,12 +11,7 @@ export default function Hero({ appear }) {
     >
       <div className="absolute left-1/2 top-1/3 -translate-y-1/2 z-10 w-[350px] h-[350px] opacity-70 blur-[100px] bg-[radial-gradient(circle_at_center,_var(--brand),_transparent_1000%)] animate-slide"></div>
 
-      <div
-        ref={(ref) => {
-          hero.current = ref;
-        }}
-        className="flex flex-col mt-10 gap-8 max-w-[700px] max-2xl:max-w-[500px] max-lg:max-w-full z-20"
-      >
+      <div className="flex flex-col mt-10 gap-8 max-w-[700px] max-2xl:max-w-[500px] max-lg:max-w-full z-20">
         <h1 className="font-bold text-[clamp(3rem,4vw,5rem)] leading-20 max-2xl:leading-12 max-2xl:text-[clamp(2.3rem,4vw,3rem)] max-lg:text-center">
           Looking for <br /> dream internship?
         </h1>
