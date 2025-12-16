@@ -15,6 +15,7 @@ dist
 dist-ssr
 
 # Environment files
+resume-analyzer
 .env
 .env*
 *.local
